@@ -1,0 +1,16 @@
+order_id,date,org_slug,product,quantity,unit_price_usd,total_usd,sales_rep,region
+SO-2023-001,2023-02-14,acme-hq-042,EcoPulse Thermostat v2.3,120,189,22680,Carlos Vega,US-West
+SO-2023-002,2023-05-03,bluepeak-011,VoltGrid Controller X500,40,1249,49960,Amira Hassan,US-East
+SO-2023-003,2023-08-22,grunhaus-009,LumenSense Sensor LS-200,500,59,29500,Lena Fischer,EU
+SO-2023-004,2023-11-10,northlabs-033,HelioVolt Cloud Professional annual,12,199,2388,Carlos Vega,US-Central
+SO-2024-001,2024-01-18,acme-hq-042,VoltGrid Controller X500,85,1249,106165,Carlos Vega,US-West
+SO-2024-002,2024-03-05,bluepeak-011,EcoPulse Thermostat v2.3,300,189,56700,Amira Hassan,US-East
+SO-2024-003,2024-06-19,grunhaus-009,VoltGrid Controller X500,60,1249,74940,Lena Fischer,EU
+SO-2024-004,2024-09-30,solaris-027,LumenSense Sensor LS-200,1200,59,70800,Diego Ruiz,US-West
+SO-2024-005,2024-12-02,acme-hq-042,HelioVolt Cloud Enterprise annual,12,599,7188,Carlos Vega,US-West
+SO-2025-001,2025-02-11,acme-hq-042,EcoPulse Thermostat v2.3,420,189,79380,Carlos Vega,US-West
+SO-2025-002,2025-04-17,northlabs-033,VoltGrid Controller X500,110,1249,137390,Amira Hassan,US-East
+SO-2025-003,2025-07-08,grunhaus-009,HelioVolt Cloud Professional annual,24,199,4776,Lena Fischer,EU
+SO-2025-004,2025-10-21,solaris-027,VoltGrid Controller X500,95,1249,118655,Diego Ruiz,US-West
+SO-2025-005,2025-12-15,bluepeak-011,LumenSense Sensor LS-200,2000,59,118000,Amira Hassan,US-East
+SO-2026-001,2026-01-22,acme-hq-042,VoltGrid Controller X500,75,1249,93675,Carlos Vega,US-West

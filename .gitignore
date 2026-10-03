@@ -1,0 +1,6 @@
+/.venv
+workflow.ipynb
+.env
+output.md
+/figures
+uv.lock

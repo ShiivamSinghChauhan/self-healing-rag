@@ -1,0 +1,15 @@
+sku,model,parameter,value,unit,notes
+HV-LS-200,LS-200,sensing,occupancy+PIR+lux+temp+humidity,,4-in-1
+HV-LS-200,LS-200,price,59,USD,MSRP
+HV-LS-200,LS-200,battery,2x AA Energizer Ultimate Lithium,,required type
+HV-LS-200,LS-200,battery_life_years,5,years,at 15-min interval firmware >=3.1.4
+HV-LS-200,LS-200,report_interval_default_sec,900,sec,15 min do not set below 300 sec
+HV-LS-200,LS-200,firmware_latest,3.1.4,,mandatory for battery life
+HV-LS-200,LS-200,range_m,30,m,open field PIR
+HV-LS-200,LS-200,operating_temp_c,-10 to 45,C,indoor IP30
+HV-LS-200,LS-200,serial_format,LS2-XXXXXX,,example LS2-884120
+HV-LS-200,LS-200,warranty_years,3,years,limited
+HV-EP-23,EP v2.3,price,189,USD,MSRP
+HV-EP-23,EP v2.3,firmware_latest,2.3.7,,adds Matter in v2.4 June 2026
+HV-VG-X500,X500,price,1249,USD,MSRP
+HV-VG-X500,X500,firmware_latest,1.9.2,,

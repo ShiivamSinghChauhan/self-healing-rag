@@ -1,0 +1,36 @@
+HelioVolt Product Troubleshooting FAQ (Internal Support Copy)
+Document ID: HV-SUP-101 | Version 4.0 | Updated: Feb 10, 2026 | Owner: Support Team
+
+Q1: EcoPulse Thermostat shows Error E-14?
+A: E-14 = C-wire undervoltage (<20VAC). Check HVAC C-wire with multimeter. If 18-20V, install included 24V C-wire adapter SKU HV-ADP-24V ($19). Power-cycle by holding Dial + Side button 10 sec. If persists after 2 cycles, RMA.
+
+Q2: VoltGrid X500 offline in dashboard?
+A: Check LED: solid red = no cloud MQTT (port 8883 blocked). Allow outbound to mqtt.heliovolt.fake:8883. Blinking amber = CT clamps reversed. Swap L1/L2 clamps. Re-provision via installer app: Settings > Re-provision > enter 8-digit PIN on side label.
+
+Q3: LumenSense LS-200 battery drains in <1 year (rated 5 years)?
+A: Caused by reporting interval set below 5 min. Default must be 15 min. Fix: Cloud Platform > Devices > LS-200 > Config > Report Interval = 900 sec. Firmware must be >=3.1.4. Replace with 2x AA Energizer Ultimate Lithium only.
+
+Q4: Cloud Platform login fails with "ORG_NOT_FOUND"?
+A: User is on wrong shard. US customers use app.heliovolt.fake, EU customers use app-eu.heliovolt.fake (eu-central-1). Clear cache, use incognito, verify org slug matches invoice (e.g., acme-hq-042).
+
+Q5: Thermostat temperature off by 3+ degrees?
+A: Run calibration: Settings > Advanced > Temp Offset. Do NOT place near heat vent. Sunlight correction must be ON if facing window. Wait 45 min after install for sensor stabilization.
+
+Q6: How to factory reset each device?
+- EcoPulse: Hold Dial + Side 15 sec until purple ring, then confirm.
+- VoltGrid X500: Press recessed RESET 10 sec with paperclip, wait 3 min.
+- LumenSense: Remove batteries, hold TEST 10 sec, reinsert.
+
+Q7: MQTT payload format for VoltGrid?
+Topic: hv/x500/{serial}/telemetry. JSON fields: volts, amps_L1, amps_L2, watts, kwh_today. Publish every 10 sec. Max payload 4KB.
+
+Q8: Warranty check?
+All hardware has 3-year limited warranty from invoice date. Check via support portal with serial. Serial formats: EP-2024-XXXXXX (EcoPulse), VG-X5-XXXXXX (VoltGrid), LS2-XXXXXX (LumenSense). 30-day returns for unopened.
+
+Q9: RMA turnaround?
+Standard RMA ships replacement in 5 business days after receiving defective unit. Advanced Replacement (Premium/Enterprise SLA) ships in 2 business days with credit-card hold.
+
+Q10: Installer discount?
+Certified installers get 15% off MSRP via partner portal partners.heliovolt.fake. Certification course HV-CERT-101 (4 hours, $99, renewed yearly).
+
+Escalation: L1 support@heliovolt.fake +1-512-555-0147. L2 Slack #support-l2. On-call PagerDuty rotation weekly.

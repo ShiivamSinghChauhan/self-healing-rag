@@ -1,0 +1,39 @@
+HELIOVOLT WARRANTY POLICY — Customer-Facing v3.0
+Document ID: HV-SUP-002 | Effective: January 1, 2026
+
+1. COVERAGE PERIOD
+All HelioVolt hardware — EcoPulse Thermostat v2.3, VoltGrid Controller X500, LumenSense Sensor LS-200 — carries a 3-YEAR LIMITED WARRANTY from original invoice date. Batteries and accessories (C-wire adapter SKU HV-ADP-24V, mounting kits) carry 1-year warranty.
+
+2. WHAT IS COVERED
+Defects in materials and workmanship under normal use per manuals. Includes sensor drift >2% outside spec, relay failure on X500, display failure on EcoPulse.
+
+3. WHAT IS NOT COVERed
+- Damage from incorrect wiring (e.g., 240V applied to 24V terminals).
+- Water ingress on indoor-rated devices (IP20).
+- Firmware modified via JTAG/serial.
+- Normal battery depletion. Use only specified batteries.
+- Acts of God, power surges over 6kV without SPD.
+
+4. REMEDY
+At HelioVolt's option: repair, replace with new or refurbished (equal spec), or refund pro-rated after 12 months. Formula: refund = purchase_price * (36 - months_used)/36.
+
+Example: $189 EcoPulse fails at month 18 with covered defect → refund = 189*(36-18)/36 = $94.50 if replacement declined.
+
+5. HOW TO CLAIM
+Email support@heliovolt.fake with subject "WARRANTY: <serial>". Include photo of serial label, invoice INV number, description. Support responds within 1 business day for Premium/Enterprise, 2 business days Standard.
+
+Serial formats:
+- EcoPulse: EP-2024-XXXXXX or EP-2025-XXXXXX
+- VoltGrid: VG-X5-XXXXXX
+- LumenSense: LS2-XXXXXX
+
+6. RETURNS (non-warranty)
+30-day returns for unopened items in original packaging. 15% restocking fee if opened but unused. No returns after 30 days except warranty.
+
+7. ADVANCED REPLACEMENT
+Available to Professional tier and above: replacement ships in 2 business days with credit-card hold for MSRP until defective unit received (within 14 days). Otherwise standard 5 business days after receipt.
+
+8. LEGAL
+This warranty is fictional for testing. Governed by Texas law. Exclusive remedy as above. No implied warranties beyond 3 years.
+
+Contact: HelioVolt Support, 4400 Helios Way Suite 300, Austin TX 78758, +1-512-555-0147.

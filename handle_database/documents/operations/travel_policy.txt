@@ -1,0 +1,23 @@
+HelioVolt Travel Policy — Domestic & International
+Document ID: HV-OPS-003 | Version 2.1 | Effective: Jan 1, 2026 | Owner: Priya Desai (CFO)
+
+1. APPROVAL
+All travel must be pre-approved in NavanFake at least 7 days ahead (14 days for international). Manager + Finance approval required over $1,000. Berlin-Austin flights always need VP approval.
+
+2. BOOKING
+Use NavanFake only. Preferred airlines: United (US), Lufthansa (EU). Economy for flights <6 hours, Premium Economy for 6+ hours, Business only for 10+ hours with VP approval. Hotel cap: $180/night domestic, $220/night Berlin. Airbnb allowed up to cap with Safety approval.
+
+3. PER DIEM & MEALS
+Per diem without receipts: $65/day domestic, $85/day international. Client dinners up to $75/person with receipt + attendee list. Alcohol reimbursed only with meals, max $25/day. No minibar.
+
+4. GROUND TRANSPORT
+Rideshare (Uber/Lyft) allowed under $50. Rental cars: compact/midsize only via Hertz. Mileage for personal car: $0.67/mile for 2026 (IRS rate). Parking reimbursed with receipt.
+
+5. EXPENSE REPORTS
+Submit within 30 days of trip end in ExpensifyFake. Attach receipts for all items >=$25. Missing receipt affidavit required over $50. Reimbursement in next bi-weekly payroll.
+
+6. INTERNATIONAL
+Daily travel insurance auto-issued via AXAFake. Germany trips: carry A1 certificate. Do not travel with customer PII on laptops without FDE + VPN. Contact security@heliovolt.fake before China/Russia travel (currently prohibited).
+
+7. CONTACT
+travel@heliovolt.fake | Slack #travel-help.

@@ -1,0 +1,46 @@
+HELIOVOLT ENERGY SOLUTIONS INC.
+Employee Handbook — Condensed Internal Edition
+Document ID: HV-HR-001 | Version 5.1 | Effective: January 1, 2026 | Owner: Sofia Marchetti
+
+1. EMPLOYMENT BASICS
+HelioVolt has 482 full-time employees as of January 1, 2026. Employment is at-will in US offices. Probation period is 90 days from start date. All employees must complete onboarding within first 5 business days.
+
+Standard work hours are 9:00 AM to 5:00 PM Central Time, Monday through Friday. Core collaboration hours are 10:00 AM to 3:00 PM CT. All internal meetings must be scheduled within core hours unless customer-facing.
+
+Hybrid rule: Austin, Denver, and Boston employees are in-office Tuesday through Thursday, remote Monday and Friday. Berlin office is fully flexible.
+
+2. CODE OF CONDUCT
+We follow RESPECT values: Responsibility, Efficiency, Sustainability, Privacy, Equity, Customer-first, Transparency.
+Harassment, discrimination, and retaliation are prohibited. Report to hr@heliovolt.fake or anonymous hotline +1-512-555-0199.
+Gifts from vendors over $50 must be disclosed via the Ethics Form in BambooFake.
+
+3. COMPENSATION
+Payroll runs bi-weekly on Fridays. US payroll provider is GustoFake. Germany payroll is on the 25th via PersonioFake.
+Overtime: non-exempt staff paid 1.5x over 40 hours/week. Exempt staff receive comp time for approved weekend on-call.
+Annual performance review cycle closes November 30. Merit increases effective April 1.
+
+4. BENEFITS SNAPSHOT (see benefits_summary_2025.pdf for full details)
+- Health: BlueCross PPO, $250 individual deductible, $750 family, company pays 85% premium.
+- Dental/Vision: DeltaFake, company pays 100%.
+- 401(k): FidelityFake, 100% match up to 4% of salary, vests immediately.
+- PTO: 20 days/year (accrue 1.67/month), carryover max 5 days.
+- Sick: 12 days/year. Parental: 16 weeks fully paid (after 12 months tenure).
+- Learning stipend: $1,500/year. Home office stipend: $800 one-time + $50/month.
+
+5. TIME OFF REQUESTS
+Submit in BambooFake (hr.heliovolt.fake) at least 14 days ahead for PTO over 3 days, 48 hours for 1-2 days. Manager approval within 2 business days. Unused PTO over 5 days is forfeited on Dec 31.
+
+6. IT & SECURITY ESSENTIALS
+Laptops: MacBook Pro 14" standard, refresh every 3 years. All disks must have FileVault enabled.
+Password minimum is 14 characters (see password_policy.txt). MFA via Okta Verify required for all systems.
+VPN endpoint is vpn.heliovolt.fake. Never use public Wi-Fi without VPN.
+
+7. EXPENSES & TRAVEL
+Expense reports due within 30 days via ExpensifyFake. Per diem: $65/day domestic, $85/day international. Hotel cap: $180/night domestic, $220/night Berlin. Mileage reimbursed at IRS rate $0.67/mile for 2026.
+
+8. TERMINATION & OFFBOARDING
+Voluntary resignation requires 2 weeks notice. Return laptop to IT within 3 business days. Final paycheck on next regular payroll. COBRA info sent within 14 days.
+
+Contact HR: hr@heliovolt.fake | Slack #hr-help | Sofia Marchetti, Head of HR, sofia.marchetti@heliovolt.fake.
+
+--- END OF HANDBOOK ---
