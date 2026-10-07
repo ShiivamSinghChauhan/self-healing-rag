@@ -1,6 +1,6 @@
-/.venv
-workflow.ipynb
-.env
-output.md
-/figures
-uv.lock
+.venv/
+__pycache__/
+index/
+.deepeval/
+memory.db
+*.log
