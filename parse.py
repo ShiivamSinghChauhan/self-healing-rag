@@ -9,12 +9,16 @@ import json
 import re
 from pathlib import Path
 
+import docx
+from docx.table import Table
+
 # "1. EMPLOYMENT BASICS" or "Q3: LumenSense battery drains ..." in the .txt files
 TXT_HEADING = re.compile(r"^(\d+\.\s+[A-Z]{2,}\b.*|Q\d+:.*)$")
 
 
 def to_markdown(path: Path) -> str:
     parsers = {
+        ".docx": docx_to_markdown,
         ".csv": csv_to_markdown,
         ".json": json_to_markdown,
         ".txt": txt_to_markdown,
@@ -24,6 +28,28 @@ def to_markdown(path: Path) -> str:
     if parser is None:
         raise ValueError(f"no parser for {path.name}")
     return parser(path).strip()
+
+
+def docx_to_markdown(path: Path) -> str:
+    blocks = []
+    for block in docx.Document(path).iter_inner_content():
+        if isinstance(block, Table):
+            blocks.append(markdown_table([[cell.text for cell in row.cells] for row in block.rows]))
+            continue
+        text = block.text.strip()
+        if not text:
+            continue
+        style = block.style.name if block.style else ""
+        if style == "Title":
+            blocks.append(f"# {text}")
+        elif style.startswith("Heading"):
+            level = int(style.split()[-1]) if style.split()[-1].isdigit() else 1
+            blocks.append(f"{'#' * (level + 1)} {text}")
+        elif style.startswith("List"):
+            blocks.append(f"- {text}")
+        else:
+            blocks.append(text)
+    return "\n\n".join(blocks)
 
 
 def csv_to_markdown(path: Path) -> str:
