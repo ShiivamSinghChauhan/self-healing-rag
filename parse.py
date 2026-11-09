@@ -11,7 +11,9 @@ import re
 from functools import cache
 from pathlib import Path
 
+import cv2
 import docx
+import numpy as np
 import pymupdf
 import pymupdf4llm
 from docx.table import Table
@@ -41,6 +43,9 @@ def to_markdown(path: Path) -> str:
 
 
 def pdf_to_markdown(path: Path) -> str:
+    with pymupdf.open(path) as pdf:
+        if not any(page.get_text().strip() for page in pdf):
+            return scanned_to_markdown(pdf)
     # pymupdf4llm runs layout analysis (tables, headings) and RapidOCR on text
     # inside charts.
     md = pymupdf4llm.to_markdown(str(path), ocr_dpi=300)
@@ -59,6 +64,56 @@ def pdf_to_markdown(path: Path) -> str:
 @cache
 def ocr_engine() -> RapidOCR:
     return RapidOCR()
+
+
+def scanned_to_markdown(pdf: pymupdf.Document) -> str:
+    """OCR a scanned document at 300 dpi (150 dpi garbles the small print), one
+    paragraph per text line, after erasing fill-in rules such as "Supervisor: ____".
+    Left in, the rule under a signature is read as letters: "Aisha Khan" became "Aisha Khann"."""
+    lines = []
+    for page in pdf:
+        pix = page.get_pixmap(dpi=300, colorspace=pymupdf.csGRAY)
+        gray = np.frombuffer(pix.samples, np.uint8).reshape(pix.height, pix.width)
+        result = ocr_engine()(cv2.imencode(".png", erase_fill_in_rules(gray))[1].tobytes())
+        if not result.txts:
+            continue
+        # boxes on the same line (vertical centres within half a line height) are joined left to right
+        boxes = sorted((box[:, 1].mean(), box[:, 0].min(), np.ptp(box[:, 1]), text)
+                       for box, text in zip(result.boxes, result.txts))
+        row = [boxes[0]]
+        for box in boxes[1:]:
+            if box[0] - row[0][0] < row[0][2] / 2:
+                row.append(box)
+            else:
+                lines.append(" ".join(text for *_, text in sorted(row, key=lambda b: b[1])))
+                row = [box]
+        lines.append(" ".join(text for *_, text in sorted(row, key=lambda b: b[1])))
+    return "\n\n".join(lines)
+
+
+def erase_fill_in_rules(gray: np.ndarray) -> np.ndarray:
+    """Paint white over runs of thin horizontal strokes ("______" or a solid rule)."""
+    ink = (gray < 160).astype(np.uint8)
+    _, _, stats, _ = cv2.connectedComponentsWithStats(ink, connectivity=8)
+    boxes = stats[1:, :4]  # x, y, width, height of every ink blob
+    tall = boxes[:, 3][boxes[:, 3] > 8]
+    line_height = float(np.median(tall)) if len(tall) else 20.0
+    strokes = sorted((b for b in boxes if b[3] <= 0.2 * line_height and b[2] >= 2 * b[3]),
+                     key=lambda b: (round(b[1] / (0.3 * line_height)), b[0]))
+    out, runs, run = gray.copy(), [], []
+    for b in strokes:
+        same_line = run and abs(b[1] - run[-1][1]) <= 0.15 * line_height
+        if same_line and b[0] - (run[-1][0] + run[-1][2]) <= 3 * max(b[2], run[-1][2]):
+            run.append(b)
+        else:
+            runs.append(run)
+            run = [b]
+    runs.append(run)
+    for run in runs:
+        if len(run) >= 4 or (len(run) == 1 and run[0][2] >= 3 * line_height):
+            for x, y, w, h in run:
+                out[max(y - 1, 0):y + h + 1, max(x - 1, 0):x + w + 1] = 255
+    return out
 
 
 def figure_texts(path: Path) -> list[str]:
