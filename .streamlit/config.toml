@@ -1,0 +1,4 @@
+[server]
+# The file watcher walks every imported module; transformers then tries to import
+# torchvision (not installed) and floods the log. Restart the app after code edits.
+fileWatcherType = "none"
