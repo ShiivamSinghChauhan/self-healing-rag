@@ -1,0 +1,21 @@
+{
+  "questions": 80,
+  "accuracy": 0.975,
+  "accuracy_by_type": {
+    "aggregate": "1/1",
+    "chart": "3/4",
+    "fact": "46/46",
+    "numeric": "3/3",
+    "ocr": "12/13",
+    "table": "13/13"
+  },
+  "source_recall": 1.0,
+  "first_attempt": 1.0,
+  "avg_context_chunks": 10,
+  "avg_answer_llm_input_tokens": 2156,
+  "avg_jev_tokens": 0,
+  "cost_per_1k_questions_usd": 0.428,
+  "latency_p50_s": 13.94,
+  "latency_p95_s": 26.77,
+  "referee_calls": 3
+}
